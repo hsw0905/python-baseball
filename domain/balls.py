@@ -10,6 +10,9 @@ class Balls:
         self._validate(balls)
         self._balls = balls
 
+    def get_list(self):
+        return self._balls
+
     def _validate(self, balls: list[Ball]):
         if len(list(set(balls))) != Balls.SIZE:
             raise InvalidBallSize("서로 다른 3개 볼이어야 합니다.")
